@@ -1,0 +1,23 @@
+{
+  "name": "apigateway-client",
+  "version": "0.0.1",
+  "description": "Node client library for ApiGateway service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahedk/apigateway-client.git"
+  },
+  "keywords": [
+    "Api",
+    "Gateway"
+  ],
+  "author": "Shahedul Huq Khandkar (https://shahed.ca)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shahedk/apigateway-client/issues"
+  },
+  "homepage": "https://github.com/shahedk/apigateway-client#readme"
+}
