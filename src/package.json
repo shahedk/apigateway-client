@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/shahedk/apigateway-client/issues"
   },
-  "homepage": "https://github.com/shahedk/apigateway-client#readme"
+  "homepage": "https://github.com/shahedk/apigateway-client#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }
