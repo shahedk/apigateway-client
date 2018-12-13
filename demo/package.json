@@ -2,13 +2,14 @@
   "name": "demo",
   "version": "0.5.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shahedul Huq Khandkar (https://shahed.ca)",
   "license": "ISC",
   "dependencies": {
-    "apigateway-client": "0.0.1"
+    "apigateway-client": "0.1.0",
+    "restify": "^7.3.0"
   }
 }

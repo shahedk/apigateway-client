@@ -15,15 +15,17 @@ function validateApiKey(req, res, next){
        apiSecret === undefined || apiSecret.length == 0){
         
         res.send(401,"apikey and/or apisecret missing");
+        next();
     }
-    
-    // Check if ApiKey && ApiSecret is valid
-    //TODO: Replace dummy code with real validation
-    if( apiKey.length > 0 && apiSecret.length > 0){
-        return next();
-    }
-    else{
-        res.send(401, "apikey and/or apisecret is not valid")
+    else{   
+        // Check if ApiKey && ApiSecret is valid
+        //TODO: Replace dummy code with real validation
+        if( apiKey.length > 0 && apiSecret.length > 0){
+            return next();
+        }
+        else{
+            res.send(401, "apikey and/or apisecret is not valid")
+        }
     }
 }
 
