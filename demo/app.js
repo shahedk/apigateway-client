@@ -1,7 +1,7 @@
 var restify = require('restify');
-var apiGatewayClient = require('apigateway-client');
+var apiKeyValidator = require('apigateway-client')
+                        .configure('https://data.elearning.club','demo');
 
-apiGatewayClient.init('https://data.elearning.club/api/isvalid/','demo')
 
 function respond(req, res, next) {
   res.send('hello from demo. ' + new Date() );
@@ -11,7 +11,7 @@ function respond(req, res, next) {
 var server = restify.createServer();
 server.get('/', respond);
 
-server.use(apiGatewayClient.validateApiKey);
+server.use(apiKeyValidator);
 
 server.listen(8080, function() {
   console.log('%s listening at %s', server.name, server.url);

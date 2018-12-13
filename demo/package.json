@@ -9,7 +9,7 @@
   "author": "Shahedul Huq Khandkar (https://shahed.ca)",
   "license": "ISC",
   "dependencies": {
-    "apigateway-client": "^0.2",
+    "apigateway-client": "0.4.0",
     "restify": "^7.3.0"
   }
 }
