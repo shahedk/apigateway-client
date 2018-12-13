@@ -32,10 +32,13 @@ function validateApiKey(req, res, next){
 function init(apiEndPoint, serviceName){
     _apiEndPoint = apiEndPoint;
     _serviceName = serviceName;
+    
+    return validateApiKey;
 }
 
 
 module.exports = {
     validateApiKey : validateApiKey,
-    init : init
+    init : init,
+    configure : init
 }
