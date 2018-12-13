@@ -28,9 +28,9 @@ function validateApiKey(req, res, next){
         'apikey' : apiKey,
         'apisecret' : apiSecret
     };
-    console.log(opt)
+    
     request(opt, function(err, res2, body){
-        console.log(res.statusCode, body)
+        
         if(err){
             throw err;
         }
@@ -52,12 +52,24 @@ function validateApiKey(req, res, next){
 }
 
 
+
 function getApiName(req){
     var tokens = req.url.split('/');
-    console.log(tokens);
     
-    return "";
+    if(tokens.length > 1){
+        let apiName = tokens[1];
+        if(apiName.includes('?')){
+            return apiName.split('?')[0];
+        }
+        else{
+            return apiName;
+        }
+    }
+    else{
+        return "";
+    }
 }
+
 
 
 function init(apiEndPoint, serviceName){

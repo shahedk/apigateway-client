@@ -10,6 +10,8 @@ function respond(req, res, next) {
 
 var server = restify.createServer();
 server.get('/', respond);
+server.get('/test', respond);
+server.get('/test/:name', respond);
 
 server.use(apiKeyValidator);
 
