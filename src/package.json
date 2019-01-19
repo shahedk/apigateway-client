@@ -1,6 +1,6 @@
 {
   "name": "apigateway-client",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Node client library for ApiGateway service",
   "main": "app.js",
   "scripts": {
