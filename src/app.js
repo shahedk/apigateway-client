@@ -39,6 +39,7 @@ function validateApiKey(req, res, next){
             let result = JSON.parse(body);
             
             if(result.isValid){
+                req.keyId = result.keyId;
                 return next();
             }
             else{
