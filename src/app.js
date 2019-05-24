@@ -17,6 +17,7 @@ function validateApiKey(req, res, next){
        apiSecret === undefined || apiSecret.length == 0){
         
         res.send(401,"apikey and/or apisecret missing");
+        return;
     }
     
     // Check if ApiKey && ApiSecret is valid
@@ -44,10 +45,12 @@ function validateApiKey(req, res, next){
             }
             else{
                 res.send(401, result.message);
+                return;
             }
         }
         else{
             res.send(401, "Unexpected error occured while validating apikey. Status Code: " + res2.statusCode);
+            return;
         }
     });
 }
